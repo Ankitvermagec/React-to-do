@@ -71,12 +71,12 @@ return (
             
    {temp.map((element)=>{   //for the multiple html tag have to use a <></>
     return <div>             
-    {element.bool?<input type='checkbox' checked onClick={()=>check(element.id)}/>
+   {element.bool? <><input type='checkbox' checked onClick={()=>check(element.id)}/>
+    {element.name}  </>
      :
     <>
     { element.id==flag  ?
       <>
-      <input type='checkbox'  onClick={()=>check(element.id)}/>
       <input type='checkbox'  onClick={()=>check(element.id)}/>
       <input type='text' Value={element.name}  id="newtext"/>
       <button onClick={()=>delete_(element)}>delete</button>
